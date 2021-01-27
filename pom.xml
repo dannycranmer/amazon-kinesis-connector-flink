@@ -195,6 +195,10 @@ under the License.
 					<groupId>com.amazonaws</groupId>
 					<artifactId>aws-java-sdk-cloudwatch</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>com.google.guava</groupId>
+					<artifactId>guava</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 
