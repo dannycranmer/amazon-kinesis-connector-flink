@@ -41,11 +41,12 @@ under the License.
 		<aws.sdk.version>1.11.844</aws.sdk.version>
 		<aws.sdkv2.version>2.13.52</aws.sdkv2.version>
 		<aws.kinesis-kcl.version>1.14.0</aws.kinesis-kcl.version>
-		<aws.kinesis-kpl.version>0.14.0</aws.kinesis-kpl.version>
+		<aws.kinesis-kpl.version>0.14.3</aws.kinesis-kpl.version>
 		<aws.dynamodbstreams-kinesis-adapter.version>1.5.0</aws.dynamodbstreams-kinesis-adapter.version>
 		<httpclient.version>4.5.9</httpclient.version>
 		<httpcore.version>4.4.11</httpcore.version>
 		<jaxb.api.version>2.3.1</jaxb.api.version>
+		<guava.version>26.0-jre</guava.version>
 	</properties>
 
 	<scm>
@@ -291,6 +292,7 @@ under the License.
 									<include>software.amazon.awssdk:*</include>
 									<include>software.amazon.eventstream:*</include>
 									<include>software.amazon.ion:*</include>
+									<include>software.amazon.glue:*</include>
 									<include>org.reactivestreams:*</include>
 									<include>io.netty:*</include>
 									<include>com.typesafe.netty:*</include>
@@ -321,6 +323,14 @@ under the License.
 								<relocation>
 									<pattern>software.amazon.ion</pattern>
 									<shadedPattern>software.amazon.kinesis.shaded.software.amazon.ion</shadedPattern>
+								</relocation>
+								<relocation>
+									<pattern>software.amazon.glue</pattern>
+									<shadedPattern>software.amazon.kinesis.shaded.software.amazon.glue</shadedPattern>
+								</relocation>
+								<relocation>
+									<pattern>com.amazonaws.glue</pattern>
+									<shadedPattern>software.amazon.kinesis.shaded.com.amazonaws.glue</shadedPattern>
 								</relocation>
 								<relocation>
 									<pattern>io.netty</pattern>
